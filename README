@@ -1,0 +1,4 @@
+Sinatra app for Todo webapp
+for the LS 185 course
+
+uses psql database instead of session
