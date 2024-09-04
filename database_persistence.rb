@@ -7,6 +7,7 @@ class DatabasePersistence
 
   def find_list(id)
     sql = "SELECT * FROM lists where id = $1"
+    puts "#{sql}: #{id}"
     result = @db.exec_params(sql, [id])
 
     tuple = result.first
@@ -15,6 +16,7 @@ class DatabasePersistence
 
   def all_lists
     sql = "SELECT * FROM lists"
+    puts sql
     result = @db.exec(sql)
 
     result.map do |tuple|
